@@ -1,0 +1,16 @@
+server:
+  port: 8080
+zuul:
+  sensitive-headers: Cookie,Set-Cookie
+  routes:
+    api:
+      path: /api/**
+      url: http://localhost:9001/
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydb
+    username: root
+    password: root
